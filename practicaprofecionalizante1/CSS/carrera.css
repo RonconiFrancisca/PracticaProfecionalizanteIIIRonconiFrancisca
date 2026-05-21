@@ -1,0 +1,273 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-general {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 220px;
+    background-color: #1e1e2f;
+    color: #e2edf8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.barra-lateral h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00bfff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.barra-lateral ul li {
+    margin-bottom: 0; 
+}
+
+.barra-lateral ul li a {
+    font-family: Tahoma, Geneva, sans-serif; 
+    display: block; /* Hace que el enlace ocupe todo el ancho del li */
+    text-decoration: none;
+    padding: 10px 20px; /*tamaño de botón */
+    border-radius: 2px; /* Bordes redondeados */
+    margin-bottom: 4px; /* Separación entre cada "botón" */
+    color: #f0f0f0;
+    background-color: transparent; /* Fondo transparente por defecto */
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.barra-lateral ul li a:hover {
+    color: #1e1e2f; /* Cambia el color del texto*/
+    background-color: #00bfff;
+    transform: translateX(5px); 
+}
+
+
+.cerrar-btn {
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f3374a;
+    color: #f8dbdb;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.cerrar-btn:hover {
+    background-color: #610710;
+    transform: scale(1.03);
+}
+
+.contenido-principal {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenido-principal h1 {
+    font-size: 32px;
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.contenedor-acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+button.crear {
+    padding: 10px 20px;
+    background-color: #92d3f8;
+    color: #0a023b;
+    border: none;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button.crear:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+}
+
+table th {
+    background-color: #0c1f33;
+    color: #fff;
+    font-weight: 600;
+}
+
+table th[colspan="2"] {
+    text-align: center;
+}
+
+table td:nth-child(n+3) {
+    text-align: center; /* centra los botones dentro de cada celda */
+}
+
+table tr{
+    background-color: #c2e2f3;
+}
+table tr:hover {
+    background-color: #b0d8f0; 
+}
+
+button.eliminar {
+    padding: 6px 12px;
+    background-color: #ffa1aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+button.eliminar:hover {
+    background-color: #c82333;
+    transform: scale(1.03);
+}
+
+button.editar {
+    padding: 6px 12px;
+    background-color: #6de78a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+button.editar:hover {
+    background-color: #0d6320;
+    transform: scale(1.03);
+}
+
+.contenido-principal p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.ventana {                            
+    display: none;                        /* oculto por defecto */
+    position: fixed;                      /* posición fija */
+    top: 0;                               /* arriba */
+    left: 0;                              /* izquierda */
+    width: 100%;                          /* ancho completo */
+    height: 100%;                         /* alto completo */
+    background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente */
+    justify-content: center;              /* centrar horizontal */
+    align-items: center;                  /* centrar vertical */
+}
+
+.ventana_contenido {                
+    background-color: #fff;               /* fondo ventana */
+    padding: 25px 30px;                   /* padding interno */
+    border-radius: 8px;                   /* bordes redondeados */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* sombra */
+    width: 500px;                         /* ancho ventana */
+    text-align: center;                   /* centrar contenido */
+}
+
+.ventana_contenido h2 {              
+    margin: 0 0 20px;                     /* espacio inferior */
+    font-size: 22px;                      /* tamaño título */
+    color: #060014;                       /* color título */
+}
+
+.ventana_contenido input[type="text"] {  
+    width: 90%;                           /* ancho input */
+    padding: 10px;                        /* padding interno */
+    margin-bottom: 20px;                  /* separación inferior */
+    border: 1px solid #03073d;            /* borde */
+    border-radius: 8px;                   /* bordes redondeados */
+    font-size: 16px;                      /* tamaño texto */
+}
+
+.ventana_contenido input[type="text"]:focus { 
+    border-color: #007bff;                /* borde azul al enfocar */
+    outline: none;                        /* quitar outline */
+}
+
+.ventana_contenido button {          
+    padding: 10px 18px;                   /* padding botón */
+    margin: 5px;                          /* margen entre botones */
+    border: none;                         /* sin borde */
+    border-radius: 8px;                   /* bordes redondeados */
+    cursor: pointer;                      /* cursor mano */
+    font-size: 15px;                      /* tamaño texto */
+    transition: background-color 0.2s, transform 0.1s; /* transición */
+}
+
+button[name="editar_guardar"] {           
+    background-color: #8bcae7;            
+    color: rgb(32, 30, 30);                         
+}
+
+button[name="editar_guardar"]:hover {     
+    background-color: #0a2f47;
+    transform: scale(1.03);            
+}
+
+button[name="crear_guardar"] {           
+    background-color: #6cc0e7;            
+    color: rgb(32, 30, 30);                         
+}
+
+button[name="crear_guardar"]:hover {     
+    background-color: #0a2f47;  
+    transform: scale(1.03);          
+}
+
+button[name="cancelar"] {           
+    background-color: #b4554e;            
+    color: rgb(24, 21, 21);                         
+}
+
+button[name="cancelar"]:hover {     
+    background-color: #6b0808;   
+    transform: scale(1.03);         
+}

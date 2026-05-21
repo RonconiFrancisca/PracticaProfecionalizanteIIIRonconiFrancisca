@@ -1,0 +1,591 @@
+﻿1. Crear BD
+2. Crear tablas y campos
+3. Datos: 30 materias, 4 carreras, 40 profesores y 200 alumnos
+
+
+CREATE TABLE Carreras(
+        id_carrera INT PRIMARY KEY AUTO_INCREMENT ,
+        nombre VARCHAR(255) NOT NULL
+);
+
+
+CREATE TABLE Profesores(
+        id_profesor INT PRIMARY KEY AUTO_INCREMENT ,
+        nombre VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE Alumnos(
+        id_alumno INT PRIMARY KEY AUTO_INCREMENT ,
+        nombre VARCHAR(255) NOT NULL,
+        dni VARCHAR(255) NOT NULL UNIQUE,
+        email VARCHAR(255)NOT NULL UNIQUE,
+        id_carrera INT, 
+        FOREIGN KEY (id_carrera) REFERENCES  Carreras(id_carrera)
+);
+
+
+CREATE TABLE Materias(
+        id_materia INT PRIMARY KEY AUTO_INCREMENT,
+        nombre VARCHAR(255) NOT NULL,
+        curso VARCHAR(255) NOT NULL,
+        id_carrera INT, 
+        FOREIGN KEY (id_carrera) REFERENCES Carreras(id_carrera),
+        id_profesor INT, 
+        FOREIGN KEY (id_profesor) REFERENCES Profesores(id_profesor)
+
+
+);
+
+
+INSERT INTO carreras(nombre) VALUES 
+('Profesorado de Historia'),
+('Tecnico en Sistemas'),
+('Tencino en Contabilidad'),
+('Profersorado de Ingles');
+
+
+
+
+INSERT INTO Profesores (nombre, email) VALUES
+('Juan Pérez', 'juanperez@gmail.com'),
+('María González', 'mariagonzalez@gmail.com'),
+('Carlos Rodríguez', 'carlosrodriguez@gmail.com'),
+('Ana López', 'analopez@gmail.com'),
+('Luis Martínez', 'luismartinez@gmail.com'),
+('Sofía Fernández', 'sofiafernandez@gmail.com'),
+('Diego Sánchez', 'diegosanchez@gmail.com'),
+('Laura Romero', 'lauraromero@gmail.com'),
+('Martín Díaz', 'martindiaz@gmail.com'),
+('Valentina Torres', 'valentinatorres@gmail.com'),
+('Pablo Herrera', 'pabloherrera@gmail.com'),
+('Camila Castro', 'camilacastro@gmail.com'),
+('Nicolás Rojas', 'nicolasrojas@gmail.com'),
+('Daniela Ortiz', 'danielaortiz@gmail.com'),
+('Federico Silva', 'federicosilva@gmail.com'),
+('Lucía Vega', 'luciavega@gmail.com'),
+('Andrés Molina', 'andresmolina@gmail.com'),
+('Paula Navarro', 'paulanavarro@gmail.com'),
+('Javier Medina', 'javiermedina@gmail.com'),
+('Florencia Ruiz', 'florenciaruiz@gmail.com'),
+('Ricardo Campos', 'ricardocampos@gmail.com'),
+('Agustina Giménez', 'agustinagimenez@gmail.com'),
+('Fernando Acosta', 'fernandoacosta@gmail.com'),
+('Julieta Cabrera', 'julietacabrera@gmail.com'),
+('Sebastián Benítez', 'sebastianbenitez@gmail.com'),
+('Martina Pereyra', 'martinapereyra@gmail.com'),
+('Gonzalo Ibarra', 'gonzaloibarra@gmail.com'),
+('Milagros Figueroa', 'milagrosfigueroa@gmail.com'),
+('Tomás Núñez', 'tomasnunez@gmail.com'),
+('Rocío Maldonado', 'rociomaldonado@gmail.com'),
+('Esteban Aguirre', 'estebanaguirre@gmail.com'),
+('Belén Paredes', 'belenparedes@gmail.com'),
+('Cristian Vázquez', 'cristianvazquez@gmail.com'),
+('Carla Benavidez', 'carlabenavidez@gmail.com'),
+('Mariano Leiva', 'marianoleiva@gmail.com'),
+('Noelia Sosa', 'noeliasosa@gmail.com'),
+('Héctor Quiroga', 'hectorquiroga@gmail.com'),
+('Natalia Bravo', 'nataliabravo@gmail.com'),
+('Ariel Godoy', 'arielgodoy@gmail.com'),
+('Verónica Luna', 'veronicaluna@gmail.com');
+
+
+INSERT INTO Alumnos (nombre, dni, email, id_carrera) VALUES
+('Alumno 1', '30000001', 'alumno1@gmail.com', 1),
+('Alumno 2', '30000002', 'alumno2@gmail.com', 2),
+('Alumno 3', '30000003', 'alumno3@gmail.com', 3),
+('Alumno 4', '30000004', 'alumno4@gmail.com', 4),
+('Alumno 5', '30000005', 'alumno5@gmail.com', 1),
+('Alumno 6', '30000006', 'alumno6@gmail.com', 2),
+('Alumno 7', '30000007', 'alumno7@gmail.com', 3),
+('Alumno 8', '30000008', 'alumno8@gmail.com', 4),
+('Alumno 9', '30000009', 'alumno9@gmail.com', 1),
+('Alumno 10', '30000010', 'alumno10@gmail.com', 2),
+('Alumno 11', '30000011', 'alumno11@gmail.com', 3),
+('Alumno 12', '30000012', 'alumno12@gmail.com', 4),
+('Alumno 13', '30000013', 'alumno13@gmail.com', 1),
+('Alumno 14', '30000014', 'alumno14@gmail.com', 2),
+('Alumno 15', '30000015', 'alumno15@gmail.com', 3),
+('Alumno 16', '30000016', 'alumno16@gmail.com', 4),
+('Alumno 17', '30000017', 'alumno17@gmail.com', 1),
+('Alumno 18', '30000018', 'alumno18@gmail.com', 2),
+('Alumno 19', '30000019', 'alumno19@gmail.com', 3),
+('Alumno 20', '30000020', 'alumno20@gmail.com', 4),
+('Alumno 21', '30000021', 'alumno21@gmail.com', 1),
+('Alumno 22', '30000022', 'alumno22@gmail.com', 2),
+('Alumno 23', '30000023', 'alumno23@gmail.com', 3),
+('Alumno 24', '30000024', 'alumno24@gmail.com', 4),
+('Alumno 25', '30000025', 'alumno25@gmail.com', 1),
+('Alumno 26', '30000026', 'alumno26@gmail.com', 2),
+('Alumno 27', '30000027', 'alumno27@gmail.com', 3),
+('Alumno 28', '30000028', 'alumno28@gmail.com', 4),
+('Alumno 29', '30000029', 'alumno29@gmail.com', 1),
+('Alumno 30', '30000030', 'alumno30@gmail.com', 2),
+('Alumno 31', '30000031', 'alumno31@gmail.com', 3),
+('Alumno 32', '30000032', 'alumno32@gmail.com', 4),
+('Alumno 33', '30000033', 'alumno33@gmail.com', 1),
+('Alumno 34', '30000034', 'alumno34@gmail.com', 2),
+('Alumno 35', '30000035', 'alumno35@gmail.com', 3),
+('Alumno 36', '30000036', 'alumno36@gmail.com', 4),
+('Alumno 37', '30000037', 'alumno37@gmail.com', 1),
+('Alumno 38', '30000038', 'alumno38@gmail.com', 2),
+('Alumno 39', '30000039', 'alumno39@gmail.com', 3),
+('Alumno 40', '30000040', 'alumno40@gmail.com', 4),
+('Alumno 41', '30000041', 'alumno41@gmail.com', 1),
+('Alumno 42', '30000042', 'alumno42@gmail.com', 2),
+('Alumno 43', '30000043', 'alumno43@gmail.com', 3),
+('Alumno 44', '30000044', 'alumno44@gmail.com', 4),
+('Alumno 45', '30000045', 'alumno45@gmail.com', 1),
+('Alumno 46', '30000046', 'alumno46@gmail.com', 2),
+('Alumno 47', '30000047', 'alumno47@gmail.com', 3),
+('Alumno 48', '30000048', 'alumno48@gmail.com', 4),
+('Alumno 49', '30000049', 'alumno49@gmail.com', 1),
+('Alumno 50', '30000050', 'alumno50@gmail.com', 2),
+('Alumno 51', '30000051', 'alumno51@gmail.com', 3),
+('Alumno 52', '30000052', 'alumno52@gmail.com', 4),
+('Alumno 53', '30000053', 'alumno53@gmail.com', 1),
+('Alumno 54', '30000054', 'alumno54@gmail.com', 2),
+('Alumno 55', '30000055', 'alumno55@gmail.com', 3),
+('Alumno 56', '30000056', 'alumno56@gmail.com', 4),
+('Alumno 57', '30000057', 'alumno57@gmail.com', 1),
+('Alumno 58', '30000058', 'alumno58@gmail.com', 2),
+('Alumno 59', '30000059', 'alumno59@gmail.com', 3),
+('Alumno 60', '30000060', 'alumno60@gmail.com', 4),
+('Alumno 61', '30000061', 'alumno61@gmail.com', 1),
+('Alumno 62', '30000062', 'alumno62@gmail.com', 2),
+('Alumno 63', '30000063', 'alumno63@gmail.com', 3),
+('Alumno 64', '30000064', 'alumno64@gmail.com', 4),
+('Alumno 65', '30000065', 'alumno65@gmail.com', 1),
+('Alumno 66', '30000066', 'alumno66@gmail.com', 2),
+('Alumno 67', '30000067', 'alumno67@gmail.com', 3),
+('Alumno 68', '30000068', 'alumno68@gmail.com', 4),
+('Alumno 69', '30000069', 'alumno69@gmail.com', 1),
+('Alumno 70', '30000070', 'alumno70@gmail.com', 2),
+('Alumno 71', '30000071', 'alumno71@gmail.com', 3),
+('Alumno 72', '30000072', 'alumno72@gmail.com', 4),
+('Alumno 73', '30000073', 'alumno73@gmail.com', 1),
+('Alumno 74', '30000074', 'alumno74@gmail.com', 2),
+('Alumno 75', '30000075', 'alumno75@gmail.com', 3),
+('Alumno 76', '30000076', 'alumno76@gmail.com', 4),
+('Alumno 77', '30000077', 'alumno77@gmail.com', 1),
+('Alumno 78', '30000078', 'alumno78@gmail.com', 2),
+('Alumno 79', '30000079', 'alumno79@gmail.com', 3),
+('Alumno 80', '30000080', 'alumno80@gmail.com', 4),
+('Alumno 81', '30000081', 'alumno81@gmail.com', 1),
+('Alumno 82', '30000082', 'alumno82@gmail.com', 2),
+('Alumno 83', '30000083', 'alumno83@gmail.com', 3),
+('Alumno 84', '30000084', 'alumno84@gmail.com', 4),
+('Alumno 85', '30000085', 'alumno85@gmail.com', 1),
+('Alumno 86', '30000086', 'alumno86@gmail.com', 2),
+('Alumno 87', '30000087', 'alumno87@gmail.com', 3),
+('Alumno 88', '30000088', 'alumno88@gmail.com', 4),
+('Alumno 89', '30000089', 'alumno89@gmail.com', 1),
+('Alumno 90', '30000090', 'alumno90@gmail.com', 2),
+('Alumno 91', '30000091', 'alumno91@gmail.com', 3),
+('Alumno 92', '30000092', 'alumno92@gmail.com', 4),
+('Alumno 93', '30000093', 'alumno93@gmail.com', 1),
+('Alumno 94', '30000094', 'alumno94@gmail.com', 2),
+('Alumno 95', '30000095', 'alumno95@gmail.com', 3),
+('Alumno 96', '30000096', 'alumno96@gmail.com', 4),
+('Alumno 97', '30000097', 'alumno97@gmail.com', 1),
+('Alumno 98', '30000098', 'alumno98@gmail.com', 2),
+('Alumno 99', '30000099', 'alumno99@gmail.com', 3),
+('Alumno 100', '30000100', 'alumno100@gmail.com', 4),
+('Alumno 101', '30000101', 'alumno101@gmail.com', 1),
+('Alumno 102', '30000102', 'alumno102@gmail.com', 2),
+('Alumno 103', '30000103', 'alumno103@gmail.com', 3),
+('Alumno 104', '30000104', 'alumno104@gmail.com', 4),
+('Alumno 105', '30000105', 'alumno105@gmail.com', 1),
+('Alumno 106', '30000106', 'alumno106@gmail.com', 2),
+('Alumno 107', '30000107', 'alumno107@gmail.com', 3),
+('Alumno 108', '30000108', 'alumno108@gmail.com', 4),
+('Alumno 109', '30000109', 'alumno109@gmail.com', 1),
+('Alumno 110', '30000110', 'alumno110@gmail.com', 2),
+('Alumno 111', '30000111', 'alumno111@gmail.com', 3),
+('Alumno 112', '30000112', 'alumno112@gmail.com', 4),
+('Alumno 113', '30000113', 'alumno113@gmail.com', 1),
+('Alumno 114', '30000114', 'alumno114@gmail.com', 2),
+('Alumno 115', '30000115', 'alumno115@gmail.com', 3),
+('Alumno 116', '30000116', 'alumno116@gmail.com', 4),
+('Alumno 117', '30000117', 'alumno117@gmail.com', 1),
+('Alumno 118', '30000118', 'alumno118@gmail.com', 2),
+('Alumno 119', '30000119', 'alumno119@gmail.com', 3),
+('Alumno 120', '30000120', 'alumno120@gmail.com', 4),
+('Alumno 121', '30000121', 'alumno121@gmail.com', 1),
+('Alumno 122', '30000122', 'alumno122@gmail.com', 2),
+('Alumno 123', '30000123', 'alumno123@gmail.com', 3),
+('Alumno 124', '30000124', 'alumno124@gmail.com', 4),
+('Alumno 125', '30000125', 'alumno125@gmail.com', 1),
+('Alumno 126', '30000126', 'alumno126@gmail.com', 2),
+('Alumno 127', '30000127', 'alumno127@gmail.com', 3),
+('Alumno 128', '30000128', 'alumno128@gmail.com', 4),
+('Alumno 129', '30000129', 'alumno129@gmail.com', 1),
+('Alumno 130', '30000130', 'alumno130@gmail.com', 2),
+('Alumno 131', '30000131', 'alumno131@gmail.com', 3),
+('Alumno 132', '30000132', 'alumno132@gmail.com', 4),
+('Alumno 133', '30000133', 'alumno133@gmail.com', 1),
+('Alumno 134', '30000134', 'alumno134@gmail.com', 2),
+('Alumno 135', '30000135', 'alumno135@gmail.com', 3),
+('Alumno 136', '30000136', 'alumno136@gmail.com', 4),
+('Alumno 137', '30000137', 'alumno137@gmail.com', 1),
+('Alumno 138', '30000138', 'alumno138@gmail.com', 2),
+('Alumno 139', '30000139', 'alumno139@gmail.com', 3),
+('Alumno 140', '30000140', 'alumno140@gmail.com', 4),
+('Alumno 141', '30000141', 'alumno141@gmail.com', 1),
+('Alumno 142', '30000142', 'alumno142@gmail.com', 2),
+('Alumno 143', '30000143', 'alumno143@gmail.com', 3),
+('Alumno 144', '30000144', 'alumno144@gmail.com', 4),
+('Alumno 145', '30000145', 'alumno145@gmail.com', 1),
+('Alumno 146', '30000146', 'alumno146@gmail.com', 2),
+('Alumno 147', '30000147', 'alumno147@gmail.com', 3),
+('Alumno 148', '30000148', 'alumno148@gmail.com', 4),
+('Alumno 149', '30000149', 'alumno149@gmail.com', 1),
+('Alumno 150', '30000150', 'alumno150@gmail.com', 2),
+('Alumno 151', '30000151', 'alumno151@gmail.com', 3),
+('Alumno 152', '30000152', 'alumno152@gmail.com', 4),
+('Alumno 153', '30000153', 'alumno153@gmail.com', 1),
+('Alumno 154', '30000154', 'alumno154@gmail.com', 2),
+('Alumno 155', '30000155', 'alumno155@gmail.com', 3),
+('Alumno 156', '30000156', 'alumno156@gmail.com', 4),
+('Alumno 157', '30000157', 'alumno157@gmail.com', 1),
+('Alumno 158', '30000158', 'alumno158@gmail.com', 2),
+('Alumno 159', '30000159', 'alumno159@gmail.com', 3),
+('Alumno 160', '30000160', 'alumno160@gmail.com', 4),
+('Alumno 161', '30000161', 'alumno161@gmail.com', 1),
+('Alumno 162', '30000162', 'alumno162@gmail.com', 2),
+('Alumno 163', '30000163', 'alumno163@gmail.com', 3),
+('Alumno 164', '30000164', 'alumno164@gmail.com', 4),
+('Alumno 165', '30000165', 'alumno165@gmail.com', 1),
+('Alumno 166', '30000166', 'alumno166@gmail.com', 2),
+('Alumno 167', '30000167', 'alumno167@gmail.com', 3),
+('Alumno 168', '30000168', 'alumno168@gmail.com', 4),
+('Alumno 169', '30000169', 'alumno169@gmail.com', 1),
+('Alumno 170', '30000170', 'alumno170@gmail.com', 2),
+('Alumno 171', '30000171', 'alumno171@gmail.com', 3),
+('Alumno 172', '30000172', 'alumno172@gmail.com', 4),
+('Alumno 173', '30000173', 'alumno173@gmail.com', 1),
+('Alumno 174', '30000174', 'alumno174@gmail.com', 2),
+('Alumno 175', '30000175', 'alumno175@gmail.com', 3),
+('Alumno 176', '30000176', 'alumno176@gmail.com', 4),
+('Alumno 177', '30000177', 'alumno177@gmail.com', 1),
+('Alumno 178', '30000178', 'alumno178@gmail.com', 2),
+('Alumno 179', '30000179', 'alumno179@gmail.com', 3),
+('Alumno 180', '30000180', 'alumno180@gmail.com', 4),
+('Alumno 181', '30000181', 'alumno181@gmail.com', 1),
+('Alumno 182', '30000182', 'alumno182@gmail.com', 2),
+('Alumno 183', '30000183', 'alumno183@gmail.com', 3),
+('Alumno 184', '30000184', 'alumno184@gmail.com', 4),
+('Alumno 185', '30000185', 'alumno185@gmail.com', 1),
+('Alumno 186', '30000186', 'alumno186@gmail.com', 2),
+('Alumno 187', '30000187', 'alumno187@gmail.com', 3),
+('Alumno 188', '30000188', 'alumno188@gmail.com', 4),
+('Alumno 189', '30000189', 'alumno189@gmail.com', 1),
+('Alumno 190', '30000190', 'alumno190@gmail.com', 2),
+('Alumno 191', '30000191', 'alumno191@gmail.com', 3),
+('Alumno 192', '30000192', 'alumno192@gmail.com', 4),
+('Alumno 193', '30000193', 'alumno193@gmail.com', 1),
+('Alumno 194', '30000194', 'alumno194@gmail.com', 2),
+('Alumno 195', '30000195', 'alumno195@gmail.com', 3),
+('Alumno 196', '30000196', 'alumno196@gmail.com', 4),
+('Alumno 197', '30000197', 'alumno197@gmail.com', 1),
+('Alumno 198', '30000198', 'alumno198@gmail.com', 2),
+('Alumno 199', '30000199', 'alumno199@gmail.com', 3),
+('Alumno 200', '30000200', 'alumno200@gmail.com', 4);
+
+
+INSERT INTO Materias (nombre, curso, id_carrera, id_profesor) VALUES
+('Historia I', '1° Año', 1, 1),
+('Historia II', '1° Año', 1, 2),
+('Historia III', '1° Año', 1, 3),
+('Geografía I', '1° Año', 1, 4),
+('Geografía II', '1° Año', 1, 5),
+('Sociología', '1° Año', 1, 6),
+('Antropología', '1° Año', 1, 7),
+('Didáctica I', '1° Año', 1, 8),
+('Pedagogía I', '1° Año', 1, 9),
+('Historia Argentina I', '1° Año', 1, 10),
+('Historia IV', '2° Año', 1, 11),
+('Historia V', '2° Año', 1, 12),
+('Geografía III', '2° Año', 1, 13),
+('Didáctica II', '2° Año', 1, 14),
+('Pedagogía II', '2° Año', 1, 15),
+('Historia Argentina II', '2° Año', 1, 16),
+('Teoría de la Historia', '2° Año', 1, 17),
+('Metodología', '2° Año', 1, 18),
+('Educación', '2° Año', 1, 19),
+('Cultura', '2° Año', 1, 20),
+('Historia VI', '3° Año', 1, 21),
+('Historia VII', '3° Año', 1, 22),
+('Historia VIII', '3° Año', 1, 23),
+('Historia IX', '3° Año', 1, 24),
+('Historia X', '3° Año', 1, 25),
+('Práctica Docente I', '3° Año', 1, 26),
+('Práctica Docente II', '3° Año', 1, 27),
+('Investigación', '3° Año', 1, 28),
+('Seminario I', '3° Año', 1, 29),
+('Seminario II', '3° Año', 1, 30),
+('Programación I', '1° Año', 2, 31),
+('Matemática I', '1° Año', 2, 32),
+('Introducción a Sistemas', '1° Año', 2, 33),
+('Lógica', '1° Año', 2, 34),
+('Arquitectura de Computadoras', '1° Año', 2, 35),
+('Inglés Técnico', '1° Año', 2, 36),
+('Base de Datos I', '1° Año', 2, 37),
+('Programación II', '1° Año', 2, 38),
+('Matemática II', '1° Año', 2, 39),
+('Sistemas Operativos', '1° Año', 2, 40),
+('Base de Datos II', '2° Año', 2, 1),
+('Redes', '2° Año', 2, 2),
+('Ingeniería de Software I', '2° Año', 2, 3),
+('Probabilidad y Estadística', '2° Año', 2, 4),
+('Programación III', '2° Año', 2, 5),
+('Seguridad Informática', '2° Año', 2, 6),
+('Inteligencia Artificial', '2° Año', 2, 7),
+('Desarrollo Web', '2° Año', 2, 8),
+('Ingeniería de Software II', '2° Año', 2, 9),
+('Big Data', '2° Año', 2, 10),
+('Proyecto Final I', '3° Año', 2, 11),
+('Ética Profesional', '3° Año', 2, 12),
+('Cloud Computing', '3° Año', 2, 13),
+('DevOps', '3° Año', 2, 14),
+('Testing de Software', '3° Año', 2, 15),
+('UX/UI', '3° Año', 2, 16),
+('Blockchain', '3° Año', 2, 17),
+('Programación Funcional', '3° Año', 2, 18),
+('Microservicios', '3° Año', 2, 19),
+('Proyecto Final II', '3° Año', 2, 20),
+('Contabilidad I', '1° Año', 3, 21),
+('Derecho Comercial', '1° Año', 3, 22),
+('Economía I', '1° Año', 3, 23),
+('Matemática Financiera', '1° Año', 3, 24),
+('Administración', '1° Año', 3, 25),
+('Impuestos I', '1° Año', 3, 26),
+('Costos I', '1° Año', 3, 27),
+('Contabilidad II', '1° Año', 3, 28),
+('Derecho Laboral', '1° Año', 3, 29),
+('Economía II', '1° Año', 3, 30),
+('Estadística', '2° Año', 3, 31),
+('Impuestos II', '2° Año', 3, 32),
+('Costos II', '2° Año', 3, 33),
+('Auditoría I', '2° Año', 3, 34),
+('Contabilidad III', '2° Año', 3, 35),
+('Auditoría II', '2° Año', 3, 36),
+('Finanzas', '2° Año', 3, 37),
+('Pericias Contables', '2° Año', 3, 38),
+('Impuestos III', '2° Año', 3, 39),
+('Análisis de Estados Contables', '2° Año', 3, 40),
+('Proyecto Final I', '3° Año', 3, 1),
+('Ética Profesional', '3° Año', 3, 2),
+('Contabilidad Pública', '3° Año', 3, 3),
+('Normas Internacionales', '3° Año', 3, 4),
+('Gestión Financiera', '3° Año', 3, 5),
+('Control Interno', '3° Año', 3, 6),
+('Liquidación de Sueldos', '3° Año', 3, 7),
+('Auditoría Informática', '3° Año', 3, 8),
+('Planeamiento Fiscal', '3° Año', 3, 9),
+('Proyecto Final II', '3° Año', 3, 10),
+('Inglés I', '1° Año', 4, 11),
+('Inglés II', '1° Año', 4, 12),
+('Fonética I', '1° Año', 4, 13),
+('Gramática I', '1° Año', 4, 14),
+('Literatura I', '1° Año', 4, 15),
+('Traducción I', '1° Año', 4, 16),
+('Lingüística', '1° Año', 4, 17),
+('Cultura Inglesa', '1° Año', 4, 18),
+('Expresión Oral', '1° Año', 4, 19),
+('Comprensión Lectora', '1° Año', 4, 20),
+('Inglés III', '2° Año', 4, 21),
+('Inglés IV', '2° Año', 4, 22),
+('Fonética II', '2° Año', 4, 23),
+('Gramática II', '2° Año', 4, 24),
+('Literatura II', '2° Año', 4, 25),
+('Traducción II', '2° Año', 4, 26),
+('Didáctica I', '2° Año', 4, 27),
+('Pedagogía', '2° Año', 4, 28),
+('Evaluación', '2° Año', 4, 29),
+('Práctica I', '2° Año', 4, 30),
+('Didáctica II', '3° Año', 4, 31),
+('Práctica II', '3° Año', 4, 32),
+('Seminario I', '3° Año', 4, 33),
+('Seminario II', '3° Año', 4, 34),
+('Proyecto Final I', '3° Año', 4, 35),
+('Proyecto Final II', '3° Año', 4, 36),
+('Inglés Técnico', '3° Año', 4, 37),
+('Investigación', '3° Año', 4, 38),
+('Comunicación', '3° Año', 4, 39),
+('Cultura Avanzada', '3° Año', 4, 40);
+
+
+
+
+1. ¿Cuántos alumnos tiene cada materia?
+2. ¿Cuántos alumnos tiene cada carrera?
+3. Modificar la BD para poder agregar las notas de los exámenes. 
+
+
+
+
+1)
+SELECT  materias.nombre,
+COUNT(alumnos.id_alumno) 
+FROM Materias INNER JOIN Alumnos ON materias.id_carrera = alumnos.id_carrera
+GROUP BY materias.id_materia, materias.nombre;
+
+
+2)
+SELECT 
+    carreras.nombre,
+    COUNT(alumnos.id_alumno) 
+FROM Carreras
+INNER JOIN Alumnos 
+    ON carreras.id_carrera = alumnos.id_carrera
+GROUP BY carreras.id_carrera, carreras.nombre;
+
+
+3)  
+
+
+
+
+CREATE TABLE Examenes(
+        id_examen INT AUTO_INCREMENT PRIMARY KEY,
+        nota DECIMAL(2,0) NULL,
+        fecha DATE NULL,
+        id_alumno INT,
+        FOREIGN KEY (id_alumno) REFERENCES alumnos(id_alumno),
+        id_materia INT,
+        FOREIGN KEY (id_materia) REFERENCES materias(id_materia),
+        CHECK(nota>=0 AND nota<=10)
+);
+
+
+
+
+
+
+ALTER TABLE Alumnos
+ADD fecha_nacimiento DATE;
+
+
+UPDATE Alumnos
+SET fecha_nacimiento = DATE_SUB(CURDATE(), 
+INTERVAL (18 + FLOOR(RAND() * 10)) YEAR);
+
+
+ALTER TABLE Materias
+ADD nota_aprobacion DECIMAL(1,0) NULL
+CHECK(nota_aprobacion IN (4,6)); 
+
+
+UPDATE Materias
+SET nota_aprobacion = 6
+
+
+
+
+INSERT INTO Examenes (nota, fecha, id_alumno, id_materia) VALUES
+(7, '2026-03-10', 1, 1),
+(4, '2026-03-12', 1, 2),
+(8, '2026-03-15', 1, 3), 
+(7, '2026-03-18', 1, 4);
+
+
+
+
+SELECT 
+    alumnos.id_alumno,
+    alumnos.nombre,
+    materias.nombre,
+    materias.curso,
+    examenes.nota,
+    examenes.fecha
+
+
+FROM Alumnos JOIN materias ON alumnos.id_carrera = materias.id_carrera
+LEFT JOIN Examenes ON examenes.id_alumno = alumnos.id_alumno 
+    AND examenes.id_materia = materias.id_materia
+WHERE alumnos.id_alumno = 1
+ORDER BY  materias.curso, materias.nombre;
+
+
+
+
+
+
+
+
+
+
+1. Creamos la tabla Usuarios
+
+
+CREATE TABLE Usuarios(
+id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(255) NOT NULL,
+correo VARCHAR(255) UNIQUE  NOT NULL,
+contrasenia VARCHAR(255) NOT NULL
+);
+
+
+2. Agregamos datos a mano
+
+
+INSERT INTO usuarios(nombre, correo, contrasenia) VALUES 
+('Juan Perez','juanperez@gmail.com','123456'),
+('Margarita Romani','margaritaromani@gmail.com','123456');
+
+
+3. mostrar con php
+
+
+DataBase.php:
+
+
+<?php
+
+
+$dsn = 'mysql:host=localhost;dbname=facultad';
+$usuario = 'root';
+$contraseña = '';
+$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,];
+
+
+try {
+    $bd = new PDO($dsn, $usuario, $contraseña, $options);
+} catch (PDOException $e) {
+    echo "Error al conectar a la base de datos: " . $e->getMessage();
+}
+
+
+?>
+
+
+index.php:
+
+
+<?php
+require_once 'DataBase.php';
+
+
+$sql = "SELECT * FROM Usuarios";
+$stmt = $bd->query($sql);
+
+
+$usuarios = $stmt->fetchAll();
+
+
+foreach ($usuarios as $u) {
+   
+    echo $u["id_usuario"] . "<br>";
+    echo $u["nombre"] . "<br>";
+    echo $u["correo"] . "<br>";
+}
+
+
+?>
+
+
+1. Login
+2. crud(carreras,materias, alumnos,profesores,examenes, usuario)
+3. trayectoria(analitico)

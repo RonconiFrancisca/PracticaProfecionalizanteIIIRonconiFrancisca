@@ -1,0 +1,248 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-general {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 220px;
+    background-color: #1e1e2f;
+    color: #e2edf8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.barra-lateral h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00bfff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.barra-lateral ul li a {
+    font-family: Tahoma, Geneva, sans-serif;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin-bottom: 4px;
+    color: #f0f0f0;
+    background-color: transparent; 
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.barra-lateral ul li a:hover {
+    color: #1e1e2f;
+    background-color: #00bfff;
+    transform: translateX(5px);
+}
+
+.cerrar-btn {
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f3374a;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.cerrar-btn:hover {
+    background-color: #610710;
+    transform: scale(1.03);
+}
+
+.contenido-principal {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenido-principal h1 {
+    text-align: center;
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contenedor-acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.crear {
+    padding: 10px 20px;
+    background-color: #92d3f8;
+    color: #0a023b;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.crear:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #0c1f33;
+    color: white;
+}
+
+table tr {
+    background-color: #c2e2f3;
+}
+
+table tr:hover {
+    background-color: #b0d8f0;
+}
+
+.eliminar {
+    padding: 6px 12px;
+    background-color: #ffa1aa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.eliminar:hover {
+    background-color: #c82333;
+}
+
+.editar {
+    padding: 6px 12px;
+    background-color: #6de78a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.editar:hover {
+    background-color: #0d6320;
+}
+
+.ventana {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana_contenido {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 450px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.ventana_contenido h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #060014;
+}
+
+.ventana_contenido form {
+    display: flex;
+    flex-direction: column;
+}
+
+.ventana_contenido input,
+.ventana_contenido select {
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #03073d;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.ventana_contenido input:focus,
+.ventana_contenido select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.contenedor-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.guardar {
+    padding: 10px 18px;
+    background-color: #6cc0e7;
+    color: rgb(32, 30, 30);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.guardar:hover {
+    background-color: #0a2f47;
+    color: white;
+    transform: scale(1.03);
+}
+
+.cancelar {
+    padding: 10px 18px;
+    background-color: #b4554e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.cancelar:hover {
+    background-color: #6b0808;
+    transform: scale(1.03);
+}

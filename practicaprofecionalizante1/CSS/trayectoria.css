@@ -1,0 +1,178 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-general {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 220px;
+    background-color: #1e1e2f;
+    color: #e2edf8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.barra-lateral h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00bfff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.barra-lateral ul li {
+    margin-bottom: 0px; 
+}
+
+
+.barra-lateral ul li a {
+    font-family: Tahoma, Geneva, sans-serif; 
+    display: block; /* Hace que el enlace ocupe todo el ancho del li */
+    text-decoration: none;
+    padding: 10px 20px; /*tamaño de botón */
+    border-radius: 2px; /* Bordes redondeados */
+    margin-bottom: 4px; /* Separación entre cada "botón" */
+    color: #f0f0f0;
+    background-color: transparent; /* Fondo transparente por defecto */
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.barra-lateral ul li a:hover {
+    color: #1e1e2f; /* Cambia el color del texto*/
+    background-color: #00bfff;
+    transform: translateX(5px); 
+}
+
+
+.cerrar-btn {
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f3374a;
+    color: #f8dbdb;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.cerrar-btn:hover {
+    background-color: #610710;
+    transform: scale(1.03);
+}
+
+.contenido-principal {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenido-principal h1 {
+    font-size: 32px;
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.formulario-busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.formulario-busqueda input {
+    width: 250px;
+    padding: 12px;
+    border: 1px solid #03073d;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.formulario-busqueda input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.formulario-busqueda button {
+    padding: 12px 22px;
+    background-color: #92d3f8;
+    color: #0a023b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    font-family: "Montserrat", sans-serif;
+}
+
+.formulario-busqueda button:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.03);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+table th,
+table td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+}
+
+table th {
+    background-color: #0c1f33;
+    color: white;
+    font-weight: 600;
+}
+
+table tr {
+    background-color: #c2e2f3;
+    transition: 0.2s;
+}
+
+table tr:hover {
+    background-color: #b0d8f0;
+}
+
+table td {
+    color: #1a1a1a;
+}
+
+table td[colspan="6"] {
+    padding: 20px;
+    font-weight: 600;
+    color: #555;
+    background-color: #eef5fa;
+}

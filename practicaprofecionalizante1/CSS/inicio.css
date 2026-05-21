@@ -1,0 +1,99 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-general {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 220px;
+    background-color: #1e1e2f;
+    color: #e2edf8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.barra-lateral h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #00bfff;
+    font-family: "Montserrat", sans-serif;
+}
+
+.barra-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.barra-lateral ul li {
+    margin-bottom: 0; 
+}
+
+.barra-lateral ul li a {
+    font-family: Tahoma, Geneva, sans-serif; 
+    display: block; /* Hace que el enlace ocupe todo el ancho del li */
+    text-decoration: none;
+    padding: 10px 20px; /*tamaño de botón */
+    border-radius: 2px; /* Bordes redondeados */
+    margin-bottom: 4px; /* Separación entre cada "botón" */
+    color: #f0f0f0;
+    background-color: transparent; /* Fondo transparente por defecto */
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.barra-lateral ul li a:hover {
+    color: #1e1e2f; /* Cambia el color del texto*/
+    background-color: #00bfff;
+    transform: translateX(5px); 
+}
+
+
+.cerrar-btn {
+    display: block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f3374a;
+    color: #f8dbdb;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.cerrar-btn:hover {
+    background-color: #610710;
+    transform: scale(1.03);
+}
+
+.contenido-principal {
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+    align-items: center;     /* centra horizontalmente */
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contenido-principal h1 {
+    font-size: 32px;
+    color: #1a1a2e;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+
+

@@ -1,0 +1,107 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(circle at center, #27386d, #090125 85%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center;     /* centra verticalmente */
+    padding: 20px;
+    position: relative;
+}
+
+.col-izquierda {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sistema {
+    font-family: "Poppins", sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: #007bff;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+}
+
+.contenedor-imagen img.imagen {
+    max-width: 250px;
+    width: 180%;
+    height: auto;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* por encima del fondo */
+}
+
+.form-login {
+    background-color: #f4f8fc;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(20, 1, 65, 0.911);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título dentro del form */
+.titulo {
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    color: #007bff;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Entradas */
+.form-login input[type="email"],
+.form-login input[type="password"],
+.form-login input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #9aa5a8;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-login input:focus {
+    border-color: #021729;
+    box-shadow: 0 0 4px rgba(0,120,215,0.4);
+    outline: none;
+}
+
+
+.form-login button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e639ce3;
+    color: rgb(230, 238, 247);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-login button:hover {
+    background-color: #032138;
+    transform: scale(1.03);
+}
+
+/* Mensaje de error */
+.form-login p {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
