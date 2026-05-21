@@ -1,0 +1,120 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+body {
+    background: linear-gradient(135deg, #810505, #96125a);
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh;
+    position: relative;
+}
+
+#intentos{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30%;
+    right: 7%;
+}
+
+#tiempo {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 33%;
+    right: 6%;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+    color: #c3d1ff;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgb(8, 8, 63);
+}
+/* Botón */
+button {
+    background:  linear-gradient(135deg, #a83373, #f15697);
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    background: #8b2759;
+    transform: scale(1.05);
+
+}
+
+
+
+/* Tablero */
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); 
+    gap: 5px;
+    width: 40%;
+    margin: 10px auto;
+    
+}
+/* Cartas */
+.carta {
+    width: 100% auto;
+    aspect-ratio: 1 / 1; /* mantiene cuadradas */
+    background: linear-gradient(135deg, #f5c2e4, #c42180);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px; 
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+/* Hover */
+.carta:hover {
+    transform: scale(1.1);
+    background: #531e7e;
+}
+
+/* Carta visible */
+.carta.visible {
+    background: #ffffff;
+    color: #000;
+    transform: rotateY(180deg);
+    width: 100%;
+    
+}
+
+/* Carta resuelta */
+.carta.resuelta {
+    background: #4CAF50;
+    color: white;
+    cursor: default;
+    transform: scale(1.05);
+}
+
+/* Mensaje final */
+#mensaje {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+#record {
+    margin-top: 15px;
+    line-height: 1.5;
+}

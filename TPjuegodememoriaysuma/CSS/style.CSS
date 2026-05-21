@@ -1,0 +1,79 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(255, 206, 244);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juego {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.titulo {
+    margin-bottom: 20px;
+    color: #3b072e;
+}
+
+.secuencia {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #540468;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #12011d;
+}
+
+input {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.correcto {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: green;
+}
+
+
+.incorrecto {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+}

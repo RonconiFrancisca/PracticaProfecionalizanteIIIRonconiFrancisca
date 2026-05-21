@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <h1>Juego de Trivia</h1>
+
+    <!-- INICIO -->
+    <div id="inicio">
+        <select id="categoria">
+            <option value="">Seleccionar categoría</option>
+        </select>
+
+        <br><br>
+        <button id="iniciar">Comenzar</button>
+        <p id="error"></p>
+    </div>
+
+    <!-- JUEGO -->
+    <div id="juego" style="display:none;">
+        <p id="progreso"></p>
+        <p id="tiempo"></p>
+        <h2 id="pregunta"></h2>
+        <div id="opciones"></div>
+    </div>
+
+    <!-- RESULTADO -->
+    <div id="resultado" style="display:none;"></div>
+
+    <script src="./JS/fn.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 200px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff4da6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e60073;
+    transform: scale(1.05);
+}
+
+#error {
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#resultado {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h2 {
+    margin-bottom: 10px;
+    color: #ff4da6;
+}
